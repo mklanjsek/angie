@@ -1,0 +1,29 @@
+<div class="card clickable">
+  <div class="card-header">{{person?.firstName}}</div>
+  <div class="card-block">
+    <div class="card-media-block">
+      <img class="card-media-image" src='assets/{{person?.image}}' width="64px" height="64px">
+      <div class="card-media-description">
+                    <span class="card-media-title" style="font-weight: 700">
+                        {{person?.firstName}} {{person?.lastName}}
+                    </span>
+        <span class="card-media-text"  style="height: 100px">
+                        {{person?.description}}
+                    </span>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer header-container">
+    <div>
+      <a *ngIf="person?.insta" href="{{person?.insta}}" target="_blank" style="padding: 0px 4px">
+        <fa-icon [icon]="faInstagram" size="lg"></fa-icon>
+      </a>
+      <a *ngIf="person?.twitter" href="{{person?.twitter}}" target="_blank" style="padding: 0px 4px">
+        <fa-icon [icon]="faTwitter" size="lg"></fa-icon>
+      </a>
+    </div>
+    <div>
+      <button  class="btn btn-sm button-right" type="button" name="button" (click) = "clickHandler()">More info</button>
+    </div>
+  </div>
+</div>
